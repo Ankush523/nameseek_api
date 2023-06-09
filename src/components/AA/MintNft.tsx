@@ -101,8 +101,8 @@ const MintNft: React.FC = () => {
 
       <Button title="Generate API Key" isLoading={loading} onClickFunc={mintNft} />
       <p className={classes.APITitle}  style={{ marginBottom: 10, marginTop: 30 }}> Your API KEY :</p>
-      {nftCount === null ? (
-          <p style={{ color: "#7E7E7E", display: "contents" }}>fetching...</p>
+      {nftCount === null || nftCount === 0 ? (
+          <p style={{ color: "#7E7E7E", display: "contents" }}>Fetching... Click on Generate API Key above if not generated before</p>
         ) : (
           <p>{config.nft.address}{nftCount}</p>
         )
